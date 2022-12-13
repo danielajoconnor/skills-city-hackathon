@@ -1,1 +1,119 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;300;400;600;900&display=swap");
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+  background-color: #dedede;
+}
+
+nav {
+  background-color: #b1b1b1;
+  text-align: center;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.282);
+          box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.282);
+}
+
+nav a {
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 900;
+  padding: 0 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #8000ff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.title {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.logos img {
+  width: 12rem;
+}
+
+.logoboxes h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.html-icon {
+  color: #FF6E17;
+}
+
+.css-icon {
+  color: #35A8DB;
+}
+
+.info-container {
+  padding: 2rem 0;
+  list-style-type: disc;
+}
+
+.info-container h3 {
+  font-size: 2rem;
+  padding: 0 0 1rem 2rem;
+}
+
+.info-container h4 {
+  font-size: 1rem;
+  padding: 0rem 0.5rem 1rem;
+}
+
+.info-container ul {
+  padding: 0 0 0 2rem;
+}
+
+.info-container .w3-example {
+  padding: 1rem 2rem;
+}
+
+.w3-codespan {
+  color: crimson;
+}
+
+.boxshadow {
+  background-color: #ababab;
+  -webkit-box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.282);
+          box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.282);
+}
+
+.css {
+  margin-left: auto;
+  margin-right: auto;
+  color: transparent;
+  width: 8rem;
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(-30%, #5802a4), to(#fa05d1));
+  background-image: linear-gradient(to right bottom, #5802a4 -30%, #fa05d1);
+  position: relative;
+  background-clip: text;
+}
+/*# sourceMappingURL=style.css.map */
