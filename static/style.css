@@ -111,9 +111,35 @@ nav a:hover {
   margin-right: auto;
   color: transparent;
   width: 8rem;
-  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(-30%, #5802a4), to(#fa05d1));
-  background-image: linear-gradient(to right bottom, #5802a4 -30%, #fa05d1);
   position: relative;
+  background: repeating-linear-gradient(to right, #5A2790 0%, #AB3585 50%, #5A2790 100%);
+  background-size: 500% auto;
+  background-position: 0 0%;
   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-animation: gradient 15s infinite;
+          animation: gradient 15s infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -500% 0;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -500% 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

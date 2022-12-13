@@ -114,9 +114,28 @@ font-weight: 900;
     color: transparent;
     width: 8rem;
     // background-image: repeating-linear-gradient(90deg,#5802a4 -50%, #fa05d1 50%, #5802a4 150%);
-    background-image: linear-gradient(to right bottom,#5802a4 -30%, #fa05d1);
+    // background-image: linear-gradient(to right bottom,#5802a4 -30%, #fa05d1);
+    // position: relative;
+    // background-clip: text;
     position: relative;
+    background: repeating-linear-gradient(to right, #5A2790 0%, #AB3585 50%, #5A2790 100%);
+    background-size: 500% auto;
+    background-position: 0 0%;
     background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradient 15s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes gradient { 
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -500% 0;
+    }
 }
 
 
