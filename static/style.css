@@ -96,7 +96,7 @@ nav a:hover {
 }
 
 .info-container {
-  padding: 2rem 0;
+  padding: 2rem 0 3rem 0;
   list-style-type: disc;
 }
 
@@ -116,9 +116,12 @@ nav a:hover {
 
 .info-container .w3-example {
   padding: 1rem 2rem;
-  border-style: solid;
-  border-width: 0px 0px 1px;
-  border-color: gray;
+}
+
+.gradient-border {
+  border: 2px solid;
+  border-image-source: repeating-linear-gradient(to bottom right, #717171 0 10%, #e604c400 30% 70%, #717171 90% 100%);
+  border-image-slice: 1;
 }
 
 .w3-codespan {
@@ -140,16 +143,15 @@ nav a:hover {
 }
 
 .css {
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   color: transparent;
   width: 8rem;
   position: relative;
   background: repeating-linear-gradient(to right, #5A2790 0%, #AB3585 50%, #5A2790 100%);
   background-size: 500% auto;
   background-position: 0 0%;
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-animation: gradient 15s infinite;
           animation: gradient 15s infinite;
   -webkit-animation-fill-mode: forwards;
