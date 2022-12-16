@@ -1,3 +1,3 @@
 # skills-city-hackathon
 
-https://danielajoconnor.github.io/skills-city-hackathon/css.html
+https://danielajoconnor.github.io/skills-city-hackathon/index.html
