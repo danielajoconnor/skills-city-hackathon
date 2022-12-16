@@ -42,11 +42,45 @@ nav a:hover {
   transition: 0.3s;
 }
 
-.title {
+h1 {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.title-container {
+  position: relative;
   text-align: center;
   padding: 1rem;
-  font-size: 2rem;
-  font-weight: 900;
+  height: 5rem;
+  overflow: hidden;
+}
+
+.title {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  padding: 0;
+}
+
+.title h2 {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.title-hover {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .logos {
@@ -146,7 +180,22 @@ nav a:hover {
   margin: auto;
   color: transparent;
   width: 8rem;
-  position: relative;
+  background: repeating-linear-gradient(to right, #5A2790 0%, #AB3585 50%, #5A2790 100%);
+  background-size: 500% auto;
+  background-position: 0 0%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-animation: gradient 15s infinite;
+          animation: gradient 15s infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.css-full {
+  margin: auto;
+  color: transparent;
   background: repeating-linear-gradient(to right, #5A2790 0%, #AB3585 50%, #5A2790 100%);
   background-size: 500% auto;
   background-position: 0 0%;
@@ -179,6 +228,13 @@ nav a:hover {
   }
   100% {
     background-position: -500% 0;
+  }
+}
+
+@media (min-width: 1010px) {
+  .title-hover:hover {
+    -webkit-transform: translateY(-86px);
+            transform: translateY(-86px);
   }
 }
 /*# sourceMappingURL=style.css.map */

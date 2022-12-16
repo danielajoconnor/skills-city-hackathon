@@ -49,12 +49,47 @@ nav a:hover {
     transition: 0.3s;
 }
 
-.title {
-text-align: center;
-padding: 1rem;
-font-size: 2rem;
-font-weight: 900;
+h1 {
+    font-size: 4rem;
+    font-weight: 900;
 }
+
+h2 {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.title-container {
+    position: relative;
+    text-align: center;
+    padding: 1rem;
+    height: 5rem;
+    overflow: hidden;
+}
+
+
+.title {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    height: 5rem;
+    padding: 0;
+
+
+    h2 {
+        transform: translateY(5px);
+    }
+}
+
+.title-hover {
+    transform: translateY(0px);
+    transition: transform 0.3s ease;
+}
+
+
+
+
 
 .logos {
     display: flex;
@@ -144,18 +179,25 @@ font-weight: 900;
 }
 
 .css{
-    // margin: 0 40% 0 40%;
-    // justify-content: center;
-    // margin-left: auto;
-    // margin-right: auto;
+    // position: relative;
     margin: auto;
     color: transparent;
     width: 8rem;
-    // background-image: repeating-linear-gradient(90deg,#5802a4 -50%, #fa05d1 50%, #5802a4 150%);
-    // background-image: linear-gradient(to right bottom,#5802a4 -30%, #fa05d1);
+    background: repeating-linear-gradient(to right, #5A2790 0%, #AB3585 50%, #5A2790 100%);
+    background-size: 500% auto;
+    background-position: 0 0%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: gradient 15s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+.css-full{
     // position: relative;
-    // background-clip: text;
-    position: relative;
+    margin: auto;
+    color: transparent;
+    // width: 8rem;
     background: repeating-linear-gradient(to right, #5A2790 0%, #AB3585 50%, #5A2790 100%);
     background-size: 500% auto;
     background-position: 0 0%;
@@ -180,5 +222,12 @@ font-weight: 900;
     }
 }
 
+// h2 {
+//     display:none;
+// }
 
-
+@media (min-width:1010px) {
+    .title-hover:hover {
+        transform: translateY(-86px);
+    }
+}
