@@ -15,14 +15,20 @@ html,body {
     border-color: hsl(0, 0%, 50%);
 }
 
-$bleedcolor: #1F1E26;
+$info-box-bg: #1F1E26;
 $gradient-border-color : rgb(113, 113, 113);
+$info-text-color:#B4A1DB;
+// $page-format: 2rem 8rem 3rem 8rem;
+$page-format-block: 2rem 3rem;
+$box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.282);
+
 
 
 * {
     font-family: 'Lexend Deca', sans-serif;
-    // font-weight: 400;
 }
+
+
 
 body {
     background-color: rgb(222, 222, 222);
@@ -32,7 +38,7 @@ nav {
     background-color: #b1b1b1;
     text-align: center;
     padding: 1rem;
-    box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.282);
+    box-shadow: $box-shadow;
     @include bottom-border();
 }
 
@@ -70,12 +76,8 @@ h2 {
 
 .title {
     position: absolute;
-    text-align: center;
     left: 0;
     right: 0;
-    height: 5rem;
-    padding: 0;
-
 
     h2 {
         transform: translateY(5px);
@@ -86,10 +88,6 @@ h2 {
     transform: translateY(0px);
     transition: transform 0.3s ease;
 }
-
-
-
-
 
 .logos {
     display: flex;
@@ -119,7 +117,6 @@ h2 {
 }
 
 
-
 .html-icon {
     color: #E45029;
 }
@@ -128,11 +125,6 @@ h2 {
     color:#35A8DB;
 }
 
-.page-format {
-    margin: 0 8rem;
-    // text-align: center;
-    // width: 15rem;
-}
 
 .info-container {
         h3 {
@@ -148,11 +140,26 @@ h2 {
         }
         .w3-example {
             padding: 1rem 2rem;
-            // @include bottom-border();
+            background-color: #ababab;
+            box-shadow: $box-shadow;
         }
-    padding: 2rem 0 3rem 0;
-    list-style-type: disc;
-    
+        padding-block: $page-format-block;
+        // padding-block: 2rem 3rem;
+        // padding-inline: MIN(10vw, 8rem);
+        // width: 80%;
+        list-style-type: disc;
+
+
+}
+
+.page-format{
+    padding-inline: 10px;
+    margin: auto;
+    max-width: 103rem;
+}
+.purple-bg{
+    color: $info-text-color;
+    background-color: $info-box-bg;
 }
 
 .gradient-border {
@@ -165,21 +172,7 @@ h2 {
     color: crimson;
 }
 
-
-.full-bleed {
-    box-shadow: 0 0 0 100vmax $bleedcolor;
-    clip-path: inset(0 -100vmax);
-    background-color: $bleedcolor;
-}
-
-.boxshadow {
-    // padding: 0.7rem 0;
-    background-color: #ababab;
-    box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.282);
-}
-
 .css{
-    // position: relative;
     margin: auto;
     color: transparent;
     width: 8rem;
@@ -194,10 +187,8 @@ h2 {
 }
 
 .css-full{
-    // position: relative;
     margin: auto;
     color: transparent;
-    // width: 8rem;
     background: repeating-linear-gradient(to right, #5A2790 0%, #AB3585 50%, #5A2790 100%);
     background-size: 500% auto;
     background-position: 0 0%;
@@ -227,4 +218,30 @@ h2 {
     .title-hover:hover {
         transform: translateY(-86px);
     }
+    
 }
+
+@media (max-width:1010px) {
+
+    .title-container {
+        height: 3.7rem;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .title h2 {
+        display:none;
+    }
+    
+}
+
+// @media (max-width:800px) {
+//     .info-container{
+//         padding: 2rem 5% 3rem 5%;
+//     }
+// }
+
+
