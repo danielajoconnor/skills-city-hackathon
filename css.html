@@ -21,42 +21,163 @@
         </div>
     </div>
 
-        <div class="info-container purple-bg">
-            <div class="page-format">
-                <h3>What is CSS?</h3>
-                <ul>
-                    <li>CSS stands for Cascading Style Sheets</li>
-                    <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
-                    <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
-                    <li>External stylesheets are stored in CSS files</li>
-                    is a paragraph", "this is a link", etc.</li>
-                </ul>
-            </div>      
+        <div class="info-container purple-bg page-format">
+            <h3>What is CSS?</h3>
+            <ul>
+                <li>CSS stands for Cascading Style Sheets</li>
+                <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+                <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+                <li>External stylesheets are stored in CSS files</li>
+                is a paragraph", "this is a link", etc.</li>
+            </ul>      
         </div>
 
 
-        <div class="info-container">
-            <div class="page-format">
+        <div class="info-container page-format">
+            
                 <h3>Why Use CSS?</h3>
                 <p style="padding-block: 0 1rem">CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p>
                 
                 <div class="w3-example gradient-border">
                         <h4>CSS Example</h4>
-                        <div class="w3-code notranslate cssHigh"><span class="cssselectorcolor" style="color:brown;">
+                        <div><span style="color:brown;">
                             body
-                            <span class="cssdelimitercolor" style="color:black">{</span><span class="csspropertycolor" style="color:#720000"><br>&nbsp;&nbsp;background-color<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> lightblue<span class="cssdelimitercolor" style="color:black">;</span></span><br></span><span class="cssdelimitercolor" style="color:black">}</span><br>
+                            <span  style="color:black">{</span><span style="color:#720000"><br>&nbsp;&nbsp;background-color<span style="color:mediumblue"><span  style="color:black">:</span> lightblue<span  style="color:black">;</span></span><br></span><span  style="color:black">}</span><br>
                             <br>h1
-                            <span class="cssdelimitercolor" style="color:black">{</span><span class="csspropertycolor" style="color:#720000"><br>
-                            &nbsp;&nbsp;color<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> white<span class="cssdelimitercolor" style="color:black">;</span></span><br>
-                            &nbsp;&nbsp;text-align<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> center<span class="cssdelimitercolor" style="color:black">;</span></span><br>
-                            </span><span class="cssdelimitercolor" style="color:black">}</span><br><br>
+                            <span  style="color:black">{</span><span style="color:#720000"><br>
+                            &nbsp;&nbsp;color<span style="color:mediumblue"><span  style="color:black">:</span> white<span  style="color:black">;</span></span><br>
+                            &nbsp;&nbsp;text-align<span style="color:mediumblue"><span  style="color:black">:</span> center<span  style="color:black">;</span></span><br>
+                            </span><span  style="color:black">}</span><br><br>
+                            p
+                            <span  style="color:black">{</span><span style="color:#720000"><br>
+                              &nbsp;
+                            font-family<span style="color:mediumblue"><span  style="color:black">:</span> verdana<span  style="color:black">;</span></span><br>
+                            &nbsp;&nbsp;font-size<span style="color:mediumblue"><span  style="color:black">:</span> 20px<span  style="color:black">;</span></span><br>
+                            </span><span  style="color:black">}</span> </span></div>
+                </div>
+        </div>
+
+        <div class="info-container purple-bg page-format">
+            <h3>CSS Selectors</h3>
+            <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.</p>
+            <br>
+            <p>We can divide CSS selectors into five categories:</p>
+            <br>
+            <ul>
+                <li>Simple selectors (select elements based on name, id, class)</li>
+                <li>Combinator selectors (select elements based on a specific relationship between them)</li>
+                <li>Pseudo-class selectors (select elements based on a certain state)</li>
+                <li>Pseudo-elements selectors (select and style a part of an element)</li>
+                <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+            </ul>
+        </div>
+
+
+        <div class="info-container page-format">
+            
+            <h3>The CSS element Selector</h3>
+            <p>The element selector selects HTML elements based on the element name.</p>
+            <br>
+            <p>Here, all &lt;p&gt; elements on the page will be 
+                center-aligned, with a red text color:</p>
+                <br>
+            
+            <div class="w3-example gradient-border">
+                    <h4>Example</h4>
+
+                    <div>
+                        <span class="cssselectorcolor" style="color:brown">
                             p
                             <span class="cssdelimitercolor" style="color:black">{</span><span class="csspropertycolor" style="color:#720000"><br>
-                              &nbsp;
-                            font-family<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> verdana<span class="cssdelimitercolor" style="color:black">;</span></span><br>
-                            &nbsp;&nbsp;font-size<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> 20px<span class="cssdelimitercolor" style="color:black">;</span></span><br>
-                            </span><span class="cssdelimitercolor" style="color:black">}</span> </span></div>
+                            &nbsp;&nbsp;text-align<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> center<span class="cssdelimitercolor" style="color:black">;</span></span><br>
+                            &nbsp;&nbsp;color<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> red<span class="cssdelimitercolor" style="color:black">;</span></span><br>
+                            </span><span class="cssdelimitercolor" style="color:black">}</span>
+                             </span>
+                    </div>
+            </div>
         </div>
+
+        <div class="info-container page-format purple-bg">
+            
+                <h3 style="padding-block: 2rem 1rem;">The CSS id Selector</h3>
+                <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
+                <br>
+                <p>The id of an element is unique within a page, so the id selector is used to select one unique element!</p>
+                <br>
+                <p>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
+                    <br>
+                <p>The CSS rule below will be applied to the HTML element with id="para1": </p>
+                    <br>
+            
+                <div class="w3-example gradient-border">
+                        <h4 style="color: black;">Example</h4>
+                        <div>
+                            <span class="cssselectorcolor" style="color:brown">
+                                #para1
+                                <span class="cssdelimitercolor" style="color:black">{</span><span class="csspropertycolor" style="color:#720000"><br>
+                                &nbsp;&nbsp;text-align<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> center<span class="cssdelimitercolor" style="color:black">;</span></span><br>
+                                &nbsp;&nbsp;color<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> red<span class="cssdelimitercolor" style="color:black">;</span></span><br>
+                                </span><span class="cssdelimitercolor" style="color:black">}</span>
+                            </span>
+                        </div>
+            
+                    </div>
+                    <div style="padding-block: 1rem 0">
+                        <p><strong>Note:</strong> An id name cannot start with a number!</p>
+                        </div>
+        </div>
+
+        <div class="info-container page-format">
+            <h3 style="padding-block: 2rem 1rem;">The CSS class Selector</h3>
+            <p>The class selector selects HTML elements with a specific class attribute.</p>
+            <br>
+            <p>To select elements with a specific class, write a period (.) character, followed by the class name.</p>
+                <br>
+            
+            <div class="w3-example gradient-border">
+                    <h4>Example</h4>
+
+                    <div>
+                        <span class="cssselectorcolor" style="color:brown">
+                            .center <span class="cssdelimitercolor" style="color:black">{</span><span class="csspropertycolor" style="color:#720000"><br>&nbsp; text-align<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> center<span class="cssdelimitercolor" style="color:black">;</span></span><br>&nbsp;&nbsp;color<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> red<span class="cssdelimitercolor" style="color:black">;</span></span><br></span><span class="cssdelimitercolor" style="color:black">}</span>
+                             </span>
+                    </div>
+            </div>
+            <br>
+            <p>You can also specify that only specific HTML elements should be affected by a class.</p>
+            <br>
+            <p>In this example only &lt;p&gt; elements with class="center" will be 
+                red and center-aligned:&nbsp;</p>
+            <br>
+
+            <div class="w3-example gradient-border">
+                    <h4>Example</h4>
+
+                    <div>
+                        <span class="cssselectorcolor" style="color:brown">
+                        p.center <span class="cssdelimitercolor" style="color:black">{</span><span class="csspropertycolor" style="color:#720000"><br>&nbsp; text-align<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> center<span class="cssdelimitercolor" style="color:black">;</span></span><br>&nbsp;&nbsp;color<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> red<span class="cssdelimitercolor" style="color:black">;</span></span><br></span><span class="cssdelimitercolor" style="color:black">}</span>
+                        </span>
+                    </div>
+            </div>
+
+
+            <br>
+            <p>HTML elements can also refer to more than one class.</p>
+            <br>
+            <p>In this example the &lt;p&gt; element will be styled according to class="center" 
+                and to class="large":&nbsp;</p>
+            <br>
+
+            <div class="w3-example gradient-border">
+                    <h4>Example</h4>
+
+                    <div>
+                        <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>p<span class="attributecolor" style="color:#720000"> class<span class="attributevaluecolor" style="color:mediumblue">="center large"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span>This paragraph refers to two classes.<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/p<span class="tagcolor" style="color:mediumblue">&gt;</span></span> 
+                    </div>
+            </div>
+            <br>
+            <p><strong>Note:</strong> A class name cannot start with a number!</p>
+    </div>
 
 
 
@@ -73,7 +194,9 @@
             </defs>
         </symbol>
     </svg> -->
-
+    <footer>
+        
+    </footer>
 
 </body>
 </html>
