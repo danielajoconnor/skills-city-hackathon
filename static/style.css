@@ -15,6 +15,9 @@ html, body {
 
 body {
   background-color: #dedede;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
 }
 
 nav {
@@ -29,17 +32,26 @@ nav {
 }
 
 nav a {
+  position: relative;
   font-size: 1.5rem;
   color: black;
   font-weight: 900;
   padding: 0 1rem;
   text-decoration: none;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 2;
 }
 
 nav a:hover {
-  color: #8000ff;
+  color: #7466cc;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.page-format {
+  padding-inline: 10px;
+  margin: auto;
+  max-width: 103rem;
 }
 
 h1 {
@@ -148,15 +160,11 @@ h2 {
           box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.282);
 }
 
-.page-format {
-  padding-inline: 10px;
-  margin: auto;
-  max-width: 103rem;
-}
-
 .purple-bg {
   color: #B4A1DB;
   background-color: #1F1E26;
+  -webkit-box-shadow: inset 20px 20px 60px #19191f, inset -20px -20px 60px #24232c;
+          box-shadow: inset 20px 20px 60px #19191f, inset -20px -20px 60px #24232c;
 }
 
 .gradient-border {
@@ -167,6 +175,45 @@ h2 {
 
 .w3-codespan {
   color: crimson;
+}
+
+.ws-table-all td, .ws-table-all th {
+  padding: 8px 8px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: top;
+}
+
+.ws-table-all th:first-child, .ws-table-all td:first-child {
+  padding-left: 16px;
+}
+
+.spes_tagname {
+  color: brown;
+}
+
+.spes_tag {
+  color: mediumblue;
+}
+
+.ws-table-all {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+  border: 1px solid #434343;
+}
+
+.ws-table-all tr:nth-child(even) {
+  background-color: #919191;
+}
+
+.w3-mid-purple {
+  background-color: #18161d;
+}
+
+.w3-light-purple {
+  background-color: #2a2833;
 }
 
 .css {
@@ -233,14 +280,27 @@ h2 {
 
 @media (max-width: 1010px) {
   .title-container {
-    height: 3.7rem;
+    height: auto;
     padding: 0;
+  }
+  .title {
+    position: relative;
   }
   h1 {
     font-size: 3rem;
   }
   .title h2 {
     display: none;
+  }
+  .info-container {
+    padding-block: 1rem 2rem;
+  }
+  .info-container .w3-example {
+    padding: 1rem 1rem;
+  }
+  .info-container h3 {
+    font-size: 1.5rem;
+    padding: 0 0 1rem 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

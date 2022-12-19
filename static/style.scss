@@ -3,11 +3,82 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
     margin:0;
     padding:0;
+    // box-sizing: border-box;
 }
+
 html,body {
     margin:0;
     padding:0;
 }
+
+* {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+    background-color: #dedede;
+    overflow-y: scroll;
+    // background-image:url("images/svg/layered-waves.svg");
+    // background-position: top right;
+    // background-repeat: no-repeat;
+    // background-size: 100vh;
+    width: 100%;
+    height: 100%;
+    // position: fixed;
+
+}
+
+// .background-img {
+//     // position: absolute;
+//     // background-attachment: fixed;
+//     // background-repeat: no-repeat;
+//     // background-position: right;
+//     background-image:url("images/svg/layered-waves.svg");
+//     // top: 0;
+//     background: no-repeat center center fixed;
+//     background-size:cover;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: auto;
+//     // z-index: -5;
+// }
+// .background-img {
+
+//     background-image:url("images/svg/layered-waves.svg");
+//   /* Set rules to fill background */
+//   min-height: 100%;
+//   background-repeat: no-repeat;
+//   background-position: top right;
+//   background-size:cover;
+// //   min-width: 1024px;
+	
+//   /* Set up proportionate scaling */
+//   width: 100%;
+//   height: auto;
+	
+//   /* Set up positioning */
+//   position:fixed;
+//   top: 0;
+//   left: 0;
+// }
+
+// .background-img {
+//     background-image:url("images/svg/layered-waves.svg");
+//     background-position: top right;
+//     background-repeat: no-repeat;
+//     background-size: auto;
+//     width: 100%;
+//     height: 100%;
+      
+//     /* Set up positioning */
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     // overflow: hidden;
+// }
+
 
 @mixin bottom-border {
     border-style: solid;
@@ -18,21 +89,10 @@ html,body {
 $info-box-bg: #1F1E26;
 $gradient-border-color : rgb(113, 113, 113);
 $info-text-color:#B4A1DB;
-// $page-format: 2rem 8rem 3rem 8rem;
 $page-format-block: 2rem 3rem;
 $box-shadow: 0px 10px 10px -1px rgba(0, 0, 0, 0.282);
 
 
-
-* {
-    font-family: 'Lexend Deca', sans-serif;
-}
-
-
-
-body {
-    background-color: rgb(222, 222, 222);
-}
 
 nav {
     background-color: #b1b1b1;
@@ -43,17 +103,63 @@ nav {
 }
 
 nav a {
+    position: relative;
     font-size: 1.5rem;
     color: black;
     font-weight: 900;
     padding: 0 1rem;
     text-decoration: none;
+    background-color: hsla(0,0,0,0);
+    z-index: 2;
 }
 
+
+
 nav a:hover {
-    color: #8000ff;
+    color: hsl(248, 50%, 60%);
+
     transition: 0.3s;
 }
+
+// .nav-anim::before {
+//     content:"";
+//     position: absolute;
+//     top: 0;
+//     left: 1rem;
+//     right: 1rem;
+//     bottom: 0;
+//     z-index: -1;
+//     border: 0px solid purple;
+//     border-image-source: repeating-linear-gradient(to bottom right,hsla(248, 50%, 60%, 1) 0 10% ,#e604c400 30% 70%, hsla(248, 50%, 60%, 1) 90% 100%);
+//     border-image-slice: 1;
+//     transition: top, left, right, bottom, 200ms ease-in-out;
+// }
+
+// .nav-anim:hover::before, 
+// .nav-anim:focus::before {
+//     border: 2px solid;
+//         border-image-source: repeating-linear-gradient(to bottom right,hsla(248, 50%, 60%, 1) 0 10% ,#e604c400 30% 70%, hsla(248, 50%, 60%, 1) 90% 100%);
+//     border-image-slice: 1;
+//     top: calc(2px * -1);
+//     left: calc(2px * -1);
+//     right: calc(2px * -1);
+//     bottom: calc(2px * -1);
+//     // border: 5px solid green;
+// }
+
+// .gradient-border {
+//     border: 2px solid;
+//     border-image-source: repeating-linear-gradient(to bottom right,$gradient-border-color 0 10% ,#e604c400 30% 70%, $gradient-border-color 90% 100%);
+//     border-image-slice: 1;
+// }
+
+
+.page-format{
+    padding-inline: 10px;
+    margin: auto;
+    max-width: 103rem;
+}
+
 
 h1 {
     font-size: 4rem;
@@ -72,7 +178,6 @@ h2 {
     height: 5rem;
     overflow: hidden;
 }
-
 
 .title {
     position: absolute;
@@ -148,18 +253,19 @@ h2 {
         // padding-inline: MIN(10vw, 8rem);
         // width: 80%;
         list-style-type: disc;
+        // width: 100%;
 
 
 }
 
-.page-format{
-    padding-inline: 10px;
-    margin: auto;
-    max-width: 103rem;
-}
+
 .purple-bg{
     color: $info-text-color;
     background-color: $info-box-bg;
+
+    // box-shadow: inset 5px 20px 50px 0px hsla(0, 0%, 0%, 0.3);
+    box-shadow: inset 20px 20px 60px hsl(240, 10%, 11%),
+    inset -20px -20px 60px #24232c;
 }
 
 .gradient-border {
@@ -170,6 +276,49 @@ h2 {
 
 .w3-codespan {
     color: crimson;
+}
+
+
+.ws-table-all td, .ws-table-all th {
+    padding: 8px 8px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+}
+
+.ws-table-all th:first-child, .ws-table-all td:first-child {
+    padding-left: 16px;
+}
+
+.spes_tagname {
+    color: brown;
+}
+
+.spes_tag {
+    color: mediumblue;
+}
+
+.ws-table-all {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+    border: 1px solid rgb(67, 67, 67);
+}
+
+.ws-table-all tr:nth-child(even) {
+    background-color: hsl(0, 0%, 57%);
+}
+
+.w3-mid-purple {
+    // background-color: hsl(248, 12%, 18%);
+    background-color: hsl(251, 12%, 10%);
+}
+
+.w3-light-purple {
+    // background-color: hsl(248, 12%, 23%);
+
+    background-color: hsl(248, 12%, 18%);
 }
 
 .css{
@@ -224,10 +373,13 @@ h2 {
 @media (max-width:1010px) {
 
     .title-container {
-        height: 3.7rem;
+        // height: 3.7rem;
+        height: auto;
         padding: 0;
     }
-
+    .title {
+        position: relative;
+    }
     h1 {
         font-size: 3rem;
     }
@@ -235,13 +387,19 @@ h2 {
     .title h2 {
         display:none;
     }
+
+    .info-container {
+        padding-block: 1rem 2rem;
+        .w3-example {
+            padding: 1rem 1rem;
+        }
     
+        h3 {
+            font-size: 1.5rem;
+            padding: 0 0 1rem 1rem;
+        }
+    }
 }
 
-// @media (max-width:800px) {
-//     .info-container{
-//         padding: 2rem 5% 3rem 5%;
-//     }
-// }
 
 
